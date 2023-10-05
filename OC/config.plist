@@ -10,7 +10,7 @@
             <array>
                 <dict>
                     <key>Comment</key>
-                    <string>DMAR.aml</string>
+                    <string>Fix Apple V-TD</string>
                     <key>Enabled</key>
                     <true/>
                     <key>Path</key>
@@ -34,7 +34,7 @@
                 </dict>
                 <dict>
                     <key>Comment</key>
-                    <string>SSDT-CPUPMB75.aml</string>
+                    <string>Add Legacy CPUPM</string>
                     <key>Enabled</key>
                     <true/>
                     <key>Path</key>
@@ -42,7 +42,7 @@
                 </dict>
                 <dict>
                     <key>Comment</key>
-                    <string>SSDT-ECSTA.aml</string>
+                    <string>Disable OEM H_EC Device</string>
                     <key>Enabled</key>
                     <true/>
                     <key>Path</key>
@@ -50,7 +50,7 @@
                 </dict>
                 <dict>
                     <key>Comment</key>
-                    <string>SSDT-FAKE-EC.aml</string>
+                    <string>Create Fake Desktop EC Device</string>
                     <key>Enabled</key>
                     <true/>
                     <key>Path</key>
@@ -66,7 +66,7 @@
                 </dict>
                 <dict>
                     <key>Comment</key>
-                    <string>SSDT-HPET.aml</string>
+                    <string>Patch IRQ HPET</string>
                     <key>Enabled</key>
                     <true/>
                     <key>Path</key>
@@ -74,7 +74,7 @@
                 </dict>
                 <dict>
                     <key>Comment</key>
-                    <string>SSDT-IMEI.aml</string>
+                    <string>Create Missing IMEI Device</string>
                     <key>Enabled</key>
                     <true/>
                     <key>Path</key>
@@ -82,7 +82,7 @@
                 </dict>
                 <dict>
                     <key>Comment</key>
-                    <string>SSDT-LAN.aml</string>
+                    <string>Create Missing PXSX Device</string>
                     <key>Enabled</key>
                     <true/>
                     <key>Path</key>
@@ -90,7 +90,7 @@
                 </dict>
                 <dict>
                     <key>Comment</key>
-                    <string>SSDT-LPCB.aml</string>
+                    <string>Load AppleLPC Kext with Compatible</string>
                     <key>Enabled</key>
                     <true/>
                     <key>Path</key>
@@ -98,7 +98,7 @@
                 </dict>
                 <dict>
                     <key>Comment</key>
-                    <string>SSDT-RHUB.aml</string>
+                    <string>Reset RHUB XHC</string>
                     <key>Enabled</key>
                     <true/>
                     <key>Path</key>
@@ -106,7 +106,7 @@
                 </dict>
                 <dict>
                     <key>Comment</key>
-                    <string>SSDT-SBUS-MCHC.aml</string>
+                    <string>Load Apple SMBus Kext</string>
                     <key>Enabled</key>
                     <true/>
                     <key>Path</key>
@@ -114,7 +114,7 @@
                 </dict>
                 <dict>
                     <key>Comment</key>
-                    <string>SSDT-XOSI.aml</string>
+                    <string>Bypass OS Check</string>
                     <key>Enabled</key>
                     <true/>
                     <key>Path</key>
@@ -122,11 +122,19 @@
                 </dict>
                 <dict>
                     <key>Comment</key>
-                    <string></string>
+                    <string>Fix RTC Region</string>
                     <key>Enabled</key>
                     <true/>
                     <key>Path</key>
                     <string>SSDT-RTC0.aml</string>
+                </dict>
+                <dict>
+                    <key>Comment</key>
+                    <string>Create MDBG Method</string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Path</key>
+                    <string>SSDT-DBG.aml</string>
                 </dict>
             </array>
             <key>Delete</key>
@@ -871,7 +879,7 @@
                     <key>Arch</key>
                     <string>Any</string>
                     <key>BundlePath</key>
-                    <string>FakeSMCRM.kext</string>
+                    <string>FakeSMC_RehabMan.kext</string>
                     <key>Comment</key>
                     <string>V1800</string>
                     <key>Enabled</key>
@@ -2350,6 +2358,8 @@
                 <dict>
                     <key>#INFO (prev-lang:kbd)</key>
                     <string>en:252 (ABC), set 656e3a323532</string>
+                    <key>#light-boot-args</key>
+                    <string>-cputsclock keepsyms=1 ipc_control_port_options=0 -nokcmismatchpanic</string>
                     <key>ForceDisplayRotationInEFI</key>
                     <integer>0</integer>
                     <key>SystemAudioVolume</key>
@@ -2359,7 +2369,7 @@
                     <key>bluetoothInternalControllerInfo</key>
                     <data>AAAAAAAAAAAAAAAAAAA=</data>
                     <key>boot-args</key>
-                    <string>-cputsclock keepsyms=1 debug=0x100 ipc_control_port_options=0 -nokcmismatchpanic -v</string>
+                    <string>-cputsclock keepsyms=1 ipc_control_port_options=0 -nokcmismatchpanic -v debug=0x12a acpi_layer=0x08 acpi_level=0x02 msgbuf=1048576</string>
                     <key>csr-active-config</key>
                     <data>AwgAAA==</data>
                     <key>prev-lang:kbd</key>
