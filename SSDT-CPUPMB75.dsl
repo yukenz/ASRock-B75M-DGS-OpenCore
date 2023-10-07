@@ -1,11 +1,11 @@
 /*
  * Intel ACPI Component Architecture
- * AML/ASL+ Disassembler version 20200528 (64-bit version)
+ * AML/ASL+ Disassembler version 20200925 (64-bit version)
  * Copyright (c) 2000 - 2020 Intel Corporation
  * 
  * Disassembling to non-symbolic legacy ASL operators
  *
- * Disassembly of SSDT-CPUPMB75.aml, Thu Oct  5 12:05:30 2023
+ * Disassembly of SSDT-CPUPMB75.aml, Sat Oct  7 12:03:56 2023
  *
  * Original Table Header:
  *     Signature        "SSDT"
