@@ -18,6 +18,14 @@
                 </dict>
                 <dict>
                     <key>Comment</key>
+                    <string>Must be Enable</string>
+                    <key>Enabled</key>
+                    <false/>
+                    <key>Path</key>
+                    <string>SSDT-DSTA.aml</string>
+                </dict>
+                <dict>
+                    <key>Comment</key>
                     <string>SSDT-CPUP-MP71.aml</string>
                     <key>Enabled</key>
                     <false/>
@@ -44,7 +52,7 @@
                     <key>Comment</key>
                     <string>Disable OEM H_EC Device</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>Path</key>
                     <string>SSDT-ECSTA.aml</string>
                 </dict>
@@ -52,7 +60,7 @@
                     <key>Comment</key>
                     <string>Create Fake Desktop EC Device</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>Path</key>
                     <string>SSDT-FAKE-EC.aml</string>
                 </dict>
@@ -68,7 +76,7 @@
                     <key>Comment</key>
                     <string>Patch IRQ HPET</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>Path</key>
                     <string>SSDT-HPET.aml</string>
                 </dict>
@@ -76,7 +84,7 @@
                     <key>Comment</key>
                     <string>Create Missing IMEI Device</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>Path</key>
                     <string>SSDT-IMEI.aml</string>
                 </dict>
@@ -84,7 +92,7 @@
                     <key>Comment</key>
                     <string>Create Missing PXSX Device</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>Path</key>
                     <string>SSDT-LAN.aml</string>
                 </dict>
@@ -92,7 +100,7 @@
                     <key>Comment</key>
                     <string>Load AppleLPC Kext with Compatible</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>Path</key>
                     <string>SSDT-LPCB.aml</string>
                 </dict>
@@ -100,7 +108,7 @@
                     <key>Comment</key>
                     <string>Reset RHUB XHC and add xHCI power prop</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>Path</key>
                     <string>SSDT-USB.aml</string>
                 </dict>
@@ -108,7 +116,7 @@
                     <key>Comment</key>
                     <string>Load Apple SMBus Kext</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>Path</key>
                     <string>SSDT-SBUS-MCHC.aml</string>
                 </dict>
@@ -116,7 +124,7 @@
                     <key>Comment</key>
                     <string>Bypass OS Check</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>Path</key>
                     <string>SSDT-XOSI.aml</string>
                 </dict>
@@ -124,7 +132,7 @@
                     <key>Comment</key>
                     <string>Fix RTC Region</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>Path</key>
                     <string>SSDT-RTC0.aml</string>
                 </dict>
@@ -132,9 +140,25 @@
                     <key>Comment</key>
                     <string>Create MDBG Method</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>Path</key>
                     <string>SSDT-DBG.aml</string>
+                </dict>
+                <dict>
+                    <key>Comment</key>
+                    <string></string>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Path</key>
+                    <string>ASRB75.aml</string>
+                </dict>
+                <dict>
+                    <key>Comment</key>
+                    <string></string>
+                    <key>Enabled</key>
+                    <false/>
+                    <key>Path</key>
+                    <string>SSDT-HPETV2.aml</string>
                 </dict>
             </array>
             <key>Delete</key>
@@ -208,7 +232,7 @@
                     <key>Count</key>
                     <integer>0</integer>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>Find</key>
                     <data>ABQnX1NUQQ==</data>
                     <key>Limit</key>
@@ -238,7 +262,7 @@
                     <key>Count</key>
                     <integer>0</integer>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>Find</key>
                     <data>BV9DUlM=</data>
                     <key>Limit</key>
@@ -354,7 +378,7 @@
                     <key>BaseSkip</key>
                     <integer>0</integer>
                     <key>Comment</key>
-                    <string>_OSI to XOSI rename - requires SSDT-XOSI.aml</string>
+                    <string>_OSI to XOSI</string>
                     <key>Count</key>
                     <integer>0</integer>
                     <key>Enabled</key>
@@ -369,66 +393,6 @@
                     <data>AAAAAA==</data>
                     <key>Replace</key>
                     <data>WE9TSQ==</data>
-                    <key>ReplaceMask</key>
-                    <data></data>
-                    <key>Skip</key>
-                    <integer>0</integer>
-                    <key>TableLength</key>
-                    <integer>0</integer>
-                    <key>TableSignature</key>
-                    <data>AAAAAA==</data>
-                </dict>
-                <dict>
-                    <key>Base</key>
-                    <string></string>
-                    <key>BaseSkip</key>
-                    <integer>0</integer>
-                    <key>Comment</key>
-                    <string>EHC1 to EH01</string>
-                    <key>Count</key>
-                    <integer>0</integer>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Find</key>
-                    <data>RUhDMQ==</data>
-                    <key>Limit</key>
-                    <integer>0</integer>
-                    <key>Mask</key>
-                    <data></data>
-                    <key>OemTableId</key>
-                    <data>AAAAAA==</data>
-                    <key>Replace</key>
-                    <data>RUgwMQ==</data>
-                    <key>ReplaceMask</key>
-                    <data></data>
-                    <key>Skip</key>
-                    <integer>0</integer>
-                    <key>TableLength</key>
-                    <integer>0</integer>
-                    <key>TableSignature</key>
-                    <data>AAAAAA==</data>
-                </dict>
-                <dict>
-                    <key>Base</key>
-                    <string></string>
-                    <key>BaseSkip</key>
-                    <integer>0</integer>
-                    <key>Comment</key>
-                    <string>EHC2 to EH02</string>
-                    <key>Count</key>
-                    <integer>0</integer>
-                    <key>Enabled</key>
-                    <true/>
-                    <key>Find</key>
-                    <data>RUhDMg==</data>
-                    <key>Limit</key>
-                    <integer>0</integer>
-                    <key>Mask</key>
-                    <data></data>
-                    <key>OemTableId</key>
-                    <data>AAAAAA==</data>
-                    <key>Replace</key>
-                    <data>RUgwMg==</data>
                     <key>ReplaceMask</key>
                     <data></data>
                     <key>Skip</key>
@@ -474,7 +438,7 @@
                     <key>BaseSkip</key>
                     <integer>0</integer>
                     <key>Comment</key>
-                    <string>H_EC _STA to XSTA - requires SSDT EC</string>
+                    <string>H_EC _STA to XSTA</string>
                     <key>Count</key>
                     <integer>0</integer>
                     <key>Enabled</key>
@@ -496,7 +460,67 @@
                     <key>TableLength</key>
                     <integer>0</integer>
                     <key>TableSignature</key>
+                    <data>RFNEVA==</data>
+                </dict>
+                <dict>
+                    <key>Base</key>
+                    <string></string>
+                    <key>BaseSkip</key>
+                    <integer>0</integer>
+                    <key>Comment</key>
+                    <string>HPET to XPET</string>
+                    <key>Count</key>
+                    <integer>0</integer>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Find</key>
+                    <data>SFBFVA==</data>
+                    <key>Limit</key>
+                    <integer>0</integer>
+                    <key>Mask</key>
+                    <data></data>
+                    <key>OemTableId</key>
                     <data>AAAAAA==</data>
+                    <key>Replace</key>
+                    <data>WFBFVA==</data>
+                    <key>ReplaceMask</key>
+                    <data></data>
+                    <key>Skip</key>
+                    <integer>0</integer>
+                    <key>TableLength</key>
+                    <integer>0</integer>
+                    <key>TableSignature</key>
+                    <data>RFNEVA==</data>
+                </dict>
+                <dict>
+                    <key>Base</key>
+                    <string></string>
+                    <key>BaseSkip</key>
+                    <integer>0</integer>
+                    <key>Comment</key>
+                    <string>HPET_STA to XSTA</string>
+                    <key>Count</key>
+                    <integer>0</integer>
+                    <key>Enabled</key>
+                    <true/>
+                    <key>Find</key>
+                    <data>X1NUQQCgE5I=</data>
+                    <key>Limit</key>
+                    <integer>0</integer>
+                    <key>Mask</key>
+                    <data></data>
+                    <key>OemTableId</key>
+                    <data>AAAAAA==</data>
+                    <key>Replace</key>
+                    <data>WFNUQQCgE5I=</data>
+                    <key>ReplaceMask</key>
+                    <data></data>
+                    <key>Skip</key>
+                    <integer>0</integer>
+                    <key>TableLength</key>
+                    <integer>0</integer>
+                    <key>TableSignature</key>
+                    <data>RFNEVA==</data>
                 </dict>
             </array>
             <key>Quirks</key>
@@ -687,6 +711,8 @@
                 </dict>
                 <key>PciRoot(0x0)/Pci(0x2,0x0)</key>
                 <dict>
+                    <key>#drive#AAPL,ig-platform-id</key>
+                    <data>CgBmAQ==</data>
                     <key>#framebuffer-fbmem</key>
                     <data>AA==</data>
                     <key>#framebuffer-memorycount</key>
@@ -697,14 +723,14 @@
                     <data>AA==</data>
                     <key>#framebuffer-stolenmem</key>
                     <data>AA==</data>
-                    <key>#md#AAPL,ig-platform-id</key>
-                    <data>CgBmAQ==</data>
+                    <key>#wegpu#framebuffer-con0-alldata</key>
+                    <data>AgAAAAEAAAAAAAAAAwQAAAQAAAAHAQAABAAAAAEAAAAAAAAA</data>
+                    <key>#woegpu#framebuffer-con0-alldata</key>
+                    <data>AgUAAAQAAAAAAAEHAwAAAAEAAAAAAAAABAAAAAEAAAAAAAAA</data>
                     <key>AAPL,ig-platform-id</key>
                     <data>BgBiAQ==</data>
                     <key>device-id</key>
                     <data>YgEAAA==</data>
-                    <key>framebuffer-con0-alldata</key>
-                    <data>AgAAAAEAAAAAAAAAAwQAAAQAAAAHAQAABAAAAAEAAAAAAAAA</data>
                     <key>framebuffer-con0-enable</key>
                     <data>AQAAAA==</data>
                     <key>framebuffer-cursormem</key>
@@ -1484,7 +1510,7 @@
                     <key>Comment</key>
                     <string>V9.9.9 | Asus VC279H EDID</string>
                     <key>Enabled</key>
-                    <true/>
+                    <false/>
                     <key>ExecutablePath</key>
                     <string></string>
                     <key>MaxKernel</key>
@@ -1848,7 +1874,7 @@
                 <key>HideAuxiliary</key>
                 <false/>
                 <key>LauncherOption</key>
-                <string>Full</string>
+                <string>Disabled</string>
                 <key>LauncherPath</key>
                 <string>Default</string>
                 <key>PickerAttributes</key>
@@ -2025,11 +2051,11 @@
                     <key>Comment</key>
                     <string>CleanNvram.efi</string>
                     <key>Enabled</key>
-                    <false/>
+                    <true/>
                     <key>Flavour</key>
                     <string>Auto</string>
                     <key>FullNvramAccess</key>
-                    <false/>
+                    <true/>
                     <key>Name</key>
                     <string>CleanNvram.efi</string>
                     <key>Path</key>
@@ -2245,11 +2271,11 @@
                     <key>Comment</key>
                     <string>OpenShell.efi</string>
                     <key>Enabled</key>
-                    <false/>
+                    <true/>
                     <key>Flavour</key>
                     <string>Auto</string>
                     <key>FullNvramAccess</key>
-                    <false/>
+                    <true/>
                     <key>Name</key>
                     <string>OpenShell.efi</string>
                     <key>Path</key>
